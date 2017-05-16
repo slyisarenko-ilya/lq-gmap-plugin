@@ -13,6 +13,7 @@
 Примеры внедрения в тему сайта: 
 
 Статически: 
+```
 <div class="map">
 	<div class="block-title">Геленджикский и Анапский районы на карте</div>
 	<?php	$rooms = OEThemeHelper::getAllRooms(); ?>
@@ -28,11 +29,13 @@
 		});
 	</script>
 </div>
+```
 
 
 
 Динамически:
 
+```
 <?php
 	$markers = ...формируем массив маркеров (Объект класса Marker модуля lq-gmap-plugin)...
 	GMap::getInstance()->build($markers, new MultipleRoomsJSRenderer(), 'marker-template');
@@ -46,13 +49,15 @@ jQuery(document).ready(function(){
 	});
 });
 </script>
-
+```
 
 
 
 Работающий плагин можно посмотреть на страницах:
 
+```
 http://ahmore.ru  - статический, с несколькими маркерами
 http://ahmore.ru/city/%d0%ba%d0%b0%d0%b1%d0%b0%d1%80%d0%b4%d0%b8%d0%bd%d0%ba%d0%b0/ - динамический, с несколькими маркерами
 http://ahmore.ru/room/%d0%b3%d0%be%d1%81%d1%82%d0%b5%d0%b2%d0%be%d0%b9-%d0%b4%d0%be%d0%bc-%d1%83%d0%bb-%d1%82%d1%83%d1%80%d0%b3%d0%b5%d0%bd%d0%b5%d0%b2%d0%b0-79/#on-map - статический, с одним маркером
+```
 
