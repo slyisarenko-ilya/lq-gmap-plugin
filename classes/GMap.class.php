@@ -78,17 +78,17 @@ class GMap{
 	private function injectScripts(){
 		if(!$this->scriptsInjected){
 			$jspath = "/wp-content/plugins/lq-gmap-plugin/scripts/";
-			wp_enqueue_script("olegeysksite-markerclusterer",
+			wp_enqueue_script("lq-gmap-plugin-markerclusterer",
 					$jspath."markerclusterer.js",
 					array(),
 					'1.0' );
 			
-			wp_enqueue_script("olegeysksite-gmap-multisearch",
+			wp_enqueue_script("lq-gmap-plugin-gmap-multisearch",
 					$jspath."gmap-multisearch.js",
 					array(),
 					'1.0' );
 	
-			wp_enqueue_script("olegeysksite-bpopup",
+			wp_enqueue_script("lq-gmap-plugin-bpopup",
 					$jspath."jquery.bpopup.min.js",
 					array(),
 					'1.0' );
